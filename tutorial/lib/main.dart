@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tutorial/101/app_bar_learn_view.dart';
-import 'package:tutorial/101/button_learn_view.dart';
-import 'package:tutorial/101/color_learn_view.dart';
-import 'package:tutorial/101/container_sized_box_learn_view.dart';
-import 'package:tutorial/101/icon_learn_view.dart';
-import 'package:tutorial/101/scaffold_learn_view.dart';
-import 'package:tutorial/101/text_learn_view.dart';
+import 'package:tutorial/101/card_learn.dart';
+import 'package:tutorial/101/color_learn.dart';
+import 'package:tutorial/101/image_learn.dart';
+import 'package:tutorial/101/padding_learn.dart';
+import 'package:tutorial/101/stateless_learn.dart';
+import 'package:tutorial/demos/note_demos_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,16 +24,29 @@ class MyApp extends StatelessWidget {
         // iconTheme: IconThemeData(
         //   color: Colors.white,
         // ),
-        errorColor: ColorsItems.sulu,
+        cardTheme: CardTheme(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+        errorColor: ColorsItems.errorColor,
+        colorScheme: const ColorScheme.dark(
+          primary: ColorsItems.porchase,
+          onPrimary: ColorsItems.sulu,
+          onBackground: ColorsItems.sulu,
+          background: ColorsItems.sulu,
+          surface: ColorsItems.sulu,
+          error: ColorsItems.errorColor,
+        ),
         appBarTheme: const AppBarTheme(
           centerTitle: true,
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.transparent,
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: ColorLearnView(),
+      home: NodeDemosView(),
     );
   }
 }

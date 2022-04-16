@@ -26,6 +26,7 @@ class ColorLearnView extends StatelessWidget {
 }
 
 class ColorsItems {
-  static final Color porchase = const Color(0xffEDBF61);
-  static final Color sulu = Color.fromARGB(255, 246, 246, 246);
+  static const Color porchase = Color(0xffEDBF61);
+  static const Color sulu = Color.fromARGB(255, 246, 246, 246);
+  static const Color errorColor = Color.fromARGB(255, 249, 75, 6);
 }

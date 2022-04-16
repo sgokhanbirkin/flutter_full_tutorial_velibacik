@@ -26,18 +26,18 @@ class ButtonLearnView extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('ElevatedButton'),
+            child: const Text('ElevatedButton'),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           ),
           FloatingActionButton(
             onPressed: () {
               // service istek at
               // sayfanın rengini düzenle
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
           SizedBox(
             width: 150,
@@ -50,7 +50,7 @@ class ButtonLearnView extends StatelessWidget {
                 padding: const EdgeInsets.all(10),
               ),
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 'OutlineButton',
                 style: TextStyle(
                   color: Colors.white,
@@ -60,7 +60,7 @@ class ButtonLearnView extends StatelessWidget {
           ),
           InkWell(
             onTap: () {},
-            child: Text('Custom'),
+            child: const Text('Custom'),
           ),
           Padding(
             padding: const EdgeInsets.only(bottom: 10.0),

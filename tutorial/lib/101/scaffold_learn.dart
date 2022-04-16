@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/101/container_sized_box_learn_view.dart';
-import 'package:tutorial/101/text_learn_view.dart';
+import 'package:tutorial/101/container_sized_box_learn.dart';
 
 class ScaffoldLearnView extends StatelessWidget {
   const ScaffoldLearnView({Key? key}) : super(key: key);
@@ -9,9 +8,9 @@ class ScaffoldLearnView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Scaffold Samples'),
+        title: const Text('Scaffold Samples'),
       ),
-      body: Center(),
+      body: const Center(),
       bottomNavigationBar: Container(
         decoration: ProjectContainerDecoration(),
         child: BottomNavigationBar(
@@ -51,13 +50,13 @@ class ScaffoldLearnView extends StatelessWidget {
             builder: (context) => Container(
               height: 100,
               color: Colors.red,
-              child: Center(
+              child: const Center(
                 child: Text('BottomSheet'),
               ),
             ),
           );
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       extendBody: true,

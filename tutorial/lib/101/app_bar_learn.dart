@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -12,7 +14,7 @@ class AppBarLearnView extends StatelessWidget {
         leading: const Icon(Icons.chevron_left),
         leadingWidth: 23,
         automaticallyImplyLeading: false,
-        actionsIconTheme: IconThemeData(
+        actionsIconTheme: const IconThemeData(
           color: Colors.white,
         ),
         toolbarTextStyle: Theme.of(context).textTheme.headline6?.copyWith(
