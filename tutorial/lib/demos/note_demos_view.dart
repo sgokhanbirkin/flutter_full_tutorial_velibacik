@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:tutorial/101/image_learn.dart';
 
 class NodeDemosView extends StatelessWidget {
-  NodeDemosView({Key? key}) : super(key: key);
+  const NodeDemosView({Key? key}) : super(key: key);
   final _title = 'Create your firs note';
   final _description =
       'Add a note abbout anything (your thougths on climate change, or your history essay and share it witht the world.';
@@ -59,9 +59,7 @@ class NodeDemosView extends StatelessWidget {
 
 // Center text widget
 class _SubtitleWidget extends StatelessWidget {
-  const _SubtitleWidget(
-      {Key? key, this.textAlign = TextAlign.center, required this.data})
-      : super(key: key);
+  const _SubtitleWidget({Key? key, this.textAlign = TextAlign.center, required this.data}) : super(key: key);
   final TextAlign? textAlign;
   final String data;
 

@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tutorial/101/card_learn.dart';
 import 'package:tutorial/101/color_learn.dart';
-import 'package:tutorial/101/column_row_learn.dart';
-import 'package:tutorial/101/custom_widget_learn.dart';
-import 'package:tutorial/101/image_learn.dart';
-import 'package:tutorial/101/indicator_learn.dart';
-import 'package:tutorial/101/list_tile_learn.dart';
-import 'package:tutorial/101/padding_learn.dart';
-import 'package:tutorial/101/stack_learn.dart';
-import 'package:tutorial/101/stateless_learn.dart';
-import 'package:tutorial/demos/note_demos_view.dart';
+import 'package:tutorial/101/page_view_learn.dart';
+import 'package:tutorial/101/statefull_learn.dart';
+import 'package:tutorial/101/statefull_life_cycle_learn.dart';
+import 'package:tutorial/101/text_field_learn.dart';
 import 'package:tutorial/demos/stack_demo_view.dart';
 
 void main() {
@@ -30,7 +24,7 @@ class MyApp extends StatelessWidget {
         // iconTheme: IconThemeData(
         //   color: Colors.white,
         // ),
-        listTileTheme: ListTileThemeData(
+        listTileTheme: const ListTileThemeData(
           contentPadding: EdgeInsets.zero,
         ),
         cardTheme: CardTheme(
@@ -38,18 +32,27 @@ class MyApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-        progressIndicatorTheme: ProgressIndicatorThemeData(
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: Colors.red,
         ),
         errorColor: ColorsItems.errorColor,
         colorScheme: const ColorScheme.dark(
-          primary: Color.fromARGB(255, 38, 69, 223),
-          onPrimary: Color.fromARGB(255, 255, 95, 95),
+          primary: Color.fromARGB(255, 17, 94, 236),
+          onPrimary: Color.fromARGB(255, 255, 255, 255),
           onBackground: Color.fromARGB(255, 255, 255, 255),
           background: Color.fromARGB(255, 186, 182, 182),
           surface: Color.fromARGB(255, 252, 98, 98),
           error: ColorsItems.errorColor,
         ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          iconColor: Colors.red,
+          border: OutlineInputBorder(),
+          labelStyle: TextStyle(color: Colors.red),
+          hintStyle: TextStyle(color: Colors.red),
+        ),
+        textTheme: TextTheme(subtitle1: TextStyle(color: Colors.red, fontSize: 20)),
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           backgroundColor: Colors.transparent,
@@ -58,7 +61,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: StateDemoView(),
+      home: const TextFieldLearn(),
     );
   }
 }

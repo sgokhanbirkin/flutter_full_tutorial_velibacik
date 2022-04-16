@@ -17,20 +17,20 @@ class ListTileLearn extends StatelessWidget {
                 child: ListTile(
                   title: const RandomImage(height: 100),
                   contentPadding: EdgeInsets.zero,
-                  subtitle: Text('This is my card'),
+                  subtitle: const Text('This is my card'),
                   minVerticalPadding: 0,
                   dense: true,
                   leading: Container(
                     alignment: Alignment.topCenter,
                     height: 100,
                     width: 20,
-                    child: Icon(Icons.money),
+                    child: const Icon(Icons.money),
                   ),
                   trailing: Container(
                     // color: Colors.red,
                     alignment: Alignment.bottomCenter,
                     width: 20,
-                    child: Icon(Icons.chevron_right),
+                    child: const Icon(Icons.chevron_right),
                   ),
                   onTap: () {},
                   style: ListTileStyle.drawer,

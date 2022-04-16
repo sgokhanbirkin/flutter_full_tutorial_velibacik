@@ -18,7 +18,7 @@ class StateDemoView extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Positioned.fill(
-                  child: RandomImage(),
+                  child: const RandomImage(),
                   bottom: _cardHeight / 2,
                 ),
                 Positioned(
@@ -39,7 +39,7 @@ class StateDemoView extends StatelessWidget {
   }
 
   Card _cardCustom() {
-    return Card(
+    return const Card(
       color: Colors.white,
       shape: RoundedRectangleBorder(),
     );

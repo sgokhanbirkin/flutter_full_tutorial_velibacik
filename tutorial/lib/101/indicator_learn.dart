@@ -7,7 +7,7 @@ class IndicatorLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [CenterRedCircularProgress()],
+        actions: const [CenterRedCircularProgress()],
       ),
       body: Center(
         child: Column(

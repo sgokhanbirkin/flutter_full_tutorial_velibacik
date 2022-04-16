@@ -9,7 +9,7 @@ class CardLearn extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Column(
-          children: [
+          children: const [
             // Card(
             //   margin: ProjectMargins.pageMargin,
             //   shadowColor: Colors.white,
@@ -84,7 +84,7 @@ class ProjectMargins {
 // RoundedRectangleBorder()
 
 class _CustomCard extends StatelessWidget {
-  _CustomCard({Key? key, required this.child}) : super(key: key);
+  const _CustomCard({Key? key, required this.child}) : super(key: key);
   final Widget child;
   // final roundenRectangleBorder = BorderRadius.circular(20);
   @override

@@ -23,7 +23,7 @@ class ColumnRowLearn extends StatelessWidget {
             ),
           ),
           //Expanded(flex: 2, child: FlutterLogo()),
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Expanded(
             flex: 2,
             child: Row(
@@ -37,7 +37,7 @@ class ColumnRowLearn extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SizedBox(
             height: ProjectContainerSizes.cardHeight,
             child: Column(
               children: [
