@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class StatefullLifeCycleLearn extends StatefulWidget {
@@ -47,6 +49,7 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
   }
 
   // dispose
+  @override
   void dispose() {
     super.dispose();
     _message = '';

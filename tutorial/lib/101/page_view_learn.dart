@@ -44,7 +44,7 @@ class _PageViewLearnState extends State<PageViewLearn> {
               style: Theme.of(context).textTheme.headline2,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           FloatingActionButton(
             onPressed: () {
               _pageController.previousPage(

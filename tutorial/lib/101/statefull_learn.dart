@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:tutorial/product/counter_hello_button.dart';
 import 'package:tutorial/product/language/language_items.dart';
@@ -11,7 +13,6 @@ class StateFullView extends StatefulWidget {
 
 class _StateFullViewState extends State<StateFullView> {
   int _counter = 0;
-  int _counterCustom = 0;
 
   void incrementCounter() {
     setState(() {

@@ -45,7 +45,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
               inputFormatters: [TextProjectInputFormmatter()._formmater],
               focusNode: focusNodeTextFieldTwo,
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.mail),
+                prefixIcon: const Icon(Icons.mail),
                 labelText: 'Enter your mail',
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -82,7 +82,7 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
               decoration: InputDecorator().emailInput,
             ),
           ),
-          TextField(
+          const TextField(
             minLines: 2,
             maxLines: 4,
           )
