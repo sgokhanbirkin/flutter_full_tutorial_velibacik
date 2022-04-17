@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/101/image_learn.dart';
 import 'package:tutorial/101/navigate_detail_learn.dart';
-import 'package:tutorial/demos/color_demos_view.dart';
-import 'package:tutorial/demos/my_collections_demo_view.dart';
 
 class NavigationLearn extends StatefulWidget {
   const NavigationLearn({Key? key}) : super(key: key);
@@ -15,6 +12,7 @@ class _NavigationLearnState extends State<NavigationLearn> with NavigatorManager
 
   @override
   void didChangeDependencies() {
+    // ignore: todo
     // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     //ModalRoute.of(context).settings.arguments
@@ -34,9 +32,10 @@ class _NavigationLearnState extends State<NavigationLearn> with NavigatorManager
         onPressed: () async {
           final response = await navigateToWidgetNormal<bool>(context, const NavigateDetailLearnView());
 
-          // if (response == true) {
-          //   print('Onaylandı');
-          // }
+          if (response == true) {
+            // ignore: avoid_print
+            print('Onaylandı');
+          }
         },
         child: const Icon(Icons.navigation_rounded),
       ),

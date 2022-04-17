@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tutorial/101/color_learn.dart';
-import 'package:tutorial/101/list_view_builder_learn.dart';
 import 'package:tutorial/101/navigation_learn.dart';
-import 'package:tutorial/demos/my_collections_demo_view.dart';
+import 'package:tutorial/202/model_learn_view.dart';
+import 'package:tutorial/202/tab_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +17,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
+        bottomAppBarTheme: BottomAppBarTheme(
+          shape: CircularNotchedRectangle(),
+        ),
+        tabBarTheme: const TabBarTheme(
+          labelColor: Colors.green,
+          unselectedLabelColor: Colors.red,
+          indicator: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: Colors.green,
+                width: 2,
+              ),
+            ),
+          ),
+        ),
+
         // backgroundColor: Colors.red,
         // scaffoldBackgroundColor: Colors.red,
         // iconTheme: IconThemeData(
@@ -59,7 +75,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const NavigationLearn(),
+      home: const ModelViewLearn(),
     );
   }
 }
