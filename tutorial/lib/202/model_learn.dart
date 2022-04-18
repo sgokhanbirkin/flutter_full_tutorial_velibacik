@@ -1,3 +1,5 @@
+// ignore_for_file: unused_field
+
 class PostModel1 {
   int? userId;
   int? id;
