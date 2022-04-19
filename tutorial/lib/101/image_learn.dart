@@ -4,6 +4,7 @@ class ImageLearn extends StatelessWidget {
   const ImageLearn({Key? key}) : super(key: key);
   final String _imagePath =
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apple-book.svg/2036px-Apple-book.svg.png";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +25,7 @@ class ImageLearn extends StatelessWidget {
               // ),
               Image.network(
                 _imagePath,
-                errorBuilder: ((context, error, stackTrace) =>
-                    const Icon(Icons.abc_outlined)),
+                errorBuilder: ((context, error, stackTrace) => const Icon(Icons.abc_outlined)),
                 fit: BoxFit.contain,
               ),
             ],

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:tutorial/202/package_learn_view.dart';
-import 'package:tutorial/202/service/service_learn_view.dart';
-import 'package:tutorial/202/service/service_post_learn.dart';
+import 'package:tutorial/202/animated_learn_view.dart';
+import 'package:tutorial/202/form_learn_view.dart';
+import 'package:tutorial/202/oop_learn_view.dart';
+import 'package:tutorial/202/state_manage/state_manage_learn_view.dart';
 import 'package:tutorial/202/theme/light_theme.dart';
-import 'package:tutorial/202/theme_learn_view.dart';
-import 'package:tutorial/202/widget_size_enum_lear_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -78,7 +76,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      home: const ThemeLearnView(),
+      home: const FormLearnView(),
     );
   }
 }

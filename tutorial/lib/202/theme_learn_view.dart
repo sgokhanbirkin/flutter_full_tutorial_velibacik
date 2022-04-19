@@ -15,11 +15,11 @@ class _ThemeLearnViewState extends State<ThemeLearnView> {
       appBar: AppBar(),
       body: Column(
         children: [
-          PassWordTextField(),
+          const PassWordTextField(),
           CheckboxListTile(
             value: true,
             onChanged: (val) {},
-            title: Text('Test'),
+            title: const Text('Test'),
           ),
         ],
       ),

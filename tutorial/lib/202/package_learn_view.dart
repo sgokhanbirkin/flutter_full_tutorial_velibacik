@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:tutorial/202/package/launch_manager.dart';
-import 'package:tutorial/202/package/loading_bar.dart';
 
 class PackageLearnView extends StatefulWidget {
   const PackageLearnView({Key? key}) : super(key: key);

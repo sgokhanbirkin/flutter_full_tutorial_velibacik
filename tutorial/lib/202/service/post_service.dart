@@ -96,6 +96,7 @@ class PostService implements IPostService {
   }
 }
 
+// ignore: unused_field
 enum _PostServicePath { posts, comments }
 enum _PostQueryPaths { postId }
 

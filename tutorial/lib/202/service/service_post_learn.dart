@@ -13,14 +13,13 @@ class ServicePostLearn extends StatefulWidget {
 
 class _ServicePostLearnState extends State<ServicePostLearn> {
   String title = 'Post Items';
-  List<PostModel>? _items;
   bool _isLoading = false;
   late final Dio _networkManager;
   final String baseUrl = 'https://jsonplaceholder.typicode.com/';
 
-  TextEditingController _idController = TextEditingController();
-  TextEditingController _titleController = TextEditingController();
-  TextEditingController _bodyController = TextEditingController();
+  final TextEditingController _idController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _bodyController = TextEditingController();
 
   Future<void> _addItemToService(PostModel model) async {
     _changeLoadingState();
@@ -103,6 +102,7 @@ class _ServicePostLearnState extends State<ServicePostLearn> {
   }
 }
 
+// ignore: unused_element
 class _PostCard extends StatelessWidget {
   const _PostCard({
     Key? key,

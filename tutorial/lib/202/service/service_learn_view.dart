@@ -17,7 +17,6 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
   String title = 'Service View';
   List<PostModel>? _items;
   bool isLoading = false;
-  late final Dio _networkManager;
   final String baseUrl = 'https://jsonplaceholder.typicode.com/';
 
   late final IPostService _postService;
@@ -25,11 +24,6 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
   @override
   void initState() {
     super.initState();
-    _networkManager = Dio(
-      BaseOptions(
-        baseUrl: baseUrl,
-      ),
-    );
     _postService = PostService();
     title = 'Get Posts';
     fetchPostItems();
