@@ -4,7 +4,7 @@ class UserManagment<T extends AdminUser> {
   UserManagment(this.admin);
 
   void sayName(GenericUser user) {
-    print(user.name);
+    //print(user.name);
   }
 
   int calculateMoney(List<GenericUser> users) {

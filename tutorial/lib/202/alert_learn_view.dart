@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable, unused_element
+
 import 'package:flutter/material.dart';
 
 class AlertLearnView extends StatefulWidget {
@@ -23,7 +25,7 @@ class _AlertLearnViewState extends State<AlertLearnView> {
             context: context,
             builder: (context) {
               //return UpdateDialog(context: context);
-              return _ImageZoomDialog();
+              return const _ImageZoomDialog();
             },
           );
           //print(response);
@@ -51,13 +53,13 @@ class _UpdateDialog extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context, true);
           },
-          child: Text('Update'),
+          child: const Text('Update'),
         ),
         TextButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Close'),
+          child: const Text('Close'),
         ),
       ],
     );

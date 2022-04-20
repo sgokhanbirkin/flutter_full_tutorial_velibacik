@@ -3,6 +3,9 @@ import 'package:tutorial/202/alert_learn_view.dart';
 import 'package:tutorial/202/cache/shared_preferences/shared_list_cache.dart';
 import 'package:tutorial/202/sheet_learn.dart';
 import 'package:tutorial/202/theme/light_theme.dart';
+import 'package:tutorial/303/call_back_learn.dart';
+import 'package:tutorial/303/part/part_of_learn.dart';
+import 'package:tutorial/303/tabbar_advance.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,7 +78,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      home: const AlertLearnView(),
+      home: const TabAdvanceLearn(),
     );
   }
 }
