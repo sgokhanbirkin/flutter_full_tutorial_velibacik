@@ -47,6 +47,9 @@ dev_dependencies:
   #google
   url_launcher: ^6.0.20
 
+  #Cache
+  shared_preferences: ^2.0.13
+  flutter_secure_storage: ^5.0.2
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

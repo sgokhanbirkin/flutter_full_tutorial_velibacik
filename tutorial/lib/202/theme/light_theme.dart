@@ -12,6 +12,7 @@ class LightTheme {
             bottom: Radius.circular(20),
           ),
         ),
+        centerTitle: true,
       ),
       scaffoldBackgroundColor: Colors.white54.withOpacity(0.8),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(backgroundColor: Colors.green),

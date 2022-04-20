@@ -15,7 +15,7 @@ class FileDownload implements IFileDownload {
   @override
   bool? downloadItem(FileItem? fileItem) {
     if (fileItem == null) throw FileDownloadException();
-    print('A');
+    // print('A');
     return true;
   }
 
@@ -29,7 +29,7 @@ class SmsDownload extends IFileDownload with ShareMixin {
   @override
   bool? downloadItem(FileItem? fileItem) {
     if (fileItem == null) throw FileDownloadException();
-    print('A');
+    // print('A');
     return true;
   }
 

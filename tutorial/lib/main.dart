@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial/202/animated_learn_view.dart';
+import 'package:tutorial/202/cache/secure_context/secure_context_view.dart';
+import 'package:tutorial/202/cache/shared_preferences/shared_learn_cache.dart';
+import 'package:tutorial/202/cache/shared_preferences/shared_list_cache.dart';
 import 'package:tutorial/202/form_learn_view.dart';
 import 'package:tutorial/202/oop_learn_view.dart';
 import 'package:tutorial/202/state_manage/state_manage_learn_view.dart';
@@ -76,7 +79,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      home: const FormLearnView(),
+      home: const SecureContextView(),
     );
   }
 }
