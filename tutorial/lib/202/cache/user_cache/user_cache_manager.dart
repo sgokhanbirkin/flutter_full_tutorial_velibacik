@@ -26,4 +26,8 @@ class UserCacheManager {
     }
     return null;
   }
+
+  Future<void> deleteItems() async {
+    await sharedManager.removeItem(SharedKeys.users);
+  }
 }

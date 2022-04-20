@@ -15,7 +15,7 @@ class SecureContextView extends StatefulWidget {
 class _SecureContextViewState extends State<SecureContextView> {
   final _storage = const FlutterSecureStorage();
   String _title = '';
-  TextEditingController _controller = TextEditingController();
+  final TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _SecureContextViewState extends State<SecureContextView> {
   Future<void> getSecureItems() async {
     _title = await _storage.read(key: _SecureKeys.token.name) ?? '';
     if (_title.isNotEmpty) {
-      print('token: $_title');
+      //print('token: $_title');
       _controller.text = _title;
     }
     setState(() {});
@@ -53,7 +53,7 @@ class _SecureContextViewState extends State<SecureContextView> {
       body: Center(
         child: TextField(
           controller: _controller,
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             hintText: 'Enter your password',
           ),
           onChanged: saveItems,
