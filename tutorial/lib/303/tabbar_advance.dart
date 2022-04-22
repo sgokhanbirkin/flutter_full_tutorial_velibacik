@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial/101/icon_learn.dart';
-import 'package:tutorial/101/image_learn.dart';
 import 'package:tutorial/303/feed_view.dart';
 
 class TabAdvanceLearn extends StatefulWidget {

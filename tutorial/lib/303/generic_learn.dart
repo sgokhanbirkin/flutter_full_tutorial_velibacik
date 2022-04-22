@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 class UserManagment<T extends AdminUser> {
   final T admin;
 

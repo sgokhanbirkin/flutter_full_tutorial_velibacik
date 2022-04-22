@@ -13,7 +13,7 @@ class CallBackLearn extends StatefulWidget {
 }
 
 class _CallBackLearnState extends State<CallBackLearn> {
-  CallbackUser? _user;
+  //CallbackUser? _user;
   final String title = 'Call back';
 
   @override

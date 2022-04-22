@@ -13,6 +13,7 @@ void main() {
     final userManagment = UserManagment(AdminUser('', '', 1, 1));
     final result = UserManagment(AdminUser('', '', 1, 1)).calculateMoney(users);
 
+    // ignore: unused_local_variable
     final response = userManagment.showNames2<String>(users);
 
     expect(result, 7);

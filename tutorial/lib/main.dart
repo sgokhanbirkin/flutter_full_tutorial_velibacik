@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/202/alert_learn_view.dart';
-import 'package:tutorial/202/cache/shared_preferences/shared_list_cache.dart';
-import 'package:tutorial/202/sheet_learn.dart';
-import 'package:tutorial/202/theme/light_theme.dart';
-import 'package:tutorial/303/call_back_learn.dart';
-import 'package:tutorial/303/part/part_of_learn.dart';
-import 'package:tutorial/303/tabbar_advance.dart';
+import 'package:tutorial/303/reqres_resource/view/reqres_provider_view.dart';
+
+import 'package:provider/provider.dart';
+import 'package:tutorial/product/global/resource_context.dart';
+import 'package:tutorial/product/global/theme_notifier.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      Provider(create: (_) => ResourceContext()),
+      ChangeNotifierProvider<ThemeNotifier>(create: ((context) => ThemeNotifier()))
+    ],
+    builder: (context, child) => const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: LightTheme().theme,
+      theme: context.watch<ThemeNotifier>().currentTheme,
       // theme: ThemeData.dark().copyWith(
       //   bottomAppBarTheme: const BottomAppBarTheme(
       //     shape: CircularNotchedRectangle(),
@@ -78,7 +82,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      home: const TabAdvanceLearn(),
+      home: const ReqresProviderView(),
     );
   }
 }
