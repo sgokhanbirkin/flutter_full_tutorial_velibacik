@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial/303/lottie_learn_view.dart';
 import 'package:tutorial/303/reqres_resource/view/reqres_provider_view.dart';
 
 import 'package:provider/provider.dart';
+import 'package:tutorial/product/constant/project_items.dart';
 import 'package:tutorial/product/global/resource_context.dart';
 import 'package:tutorial/product/global/theme_notifier.dart';
 
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: ProjectItems.projectName,
       theme: context.watch<ThemeNotifier>().currentTheme,
       // theme: ThemeData.dark().copyWith(
       //   bottomAppBarTheme: const BottomAppBarTheme(
@@ -82,7 +84,7 @@ class MyApp extends StatelessWidget {
       //   ),
       // ),
       debugShowCheckedModeBanner: false,
-      home: const ReqresProviderView(),
+      home: const LottieLearnView(),
     );
   }
 }

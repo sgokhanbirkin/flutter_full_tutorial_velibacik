@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'resource_model.g.dart';
@@ -25,7 +26,7 @@ class ResourceModel {
 }
 
 @JsonSerializable()
-class Data {
+class Data extends Equatable {
   final int? id;
   final String? name;
   final int? year;
@@ -33,7 +34,7 @@ class Data {
   final String? pantoneValue;
   final StatusCode? status;
 
-  Data({this.id, this.name, this.year, this.color, this.pantoneValue, this.status});
+  const Data({this.id, this.name, this.year, this.color, this.pantoneValue, this.status});
 
   factory Data.fromJson(Map<String, dynamic> json) {
     return _$DataFromJson(json);
@@ -42,6 +43,10 @@ class Data {
   Map<String, dynamic> toJson() {
     return _$DataToJson(this);
   }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id, name, year];
 }
 
 @JsonSerializable()
