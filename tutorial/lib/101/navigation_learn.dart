@@ -7,7 +7,7 @@ class NavigationLearn extends StatefulWidget {
   State<NavigationLearn> createState() => _NavigationLearnState();
 }
 
-class _NavigationLearnState extends State<NavigationLearn> with NavigatorManager {
+class _NavigationLearnState extends State<NavigationLearn> with NavigatorManagerFirst {
   List<int> selectedItems = [];
 
   @override
@@ -65,7 +65,7 @@ class _NavigationLearnState extends State<NavigationLearn> with NavigatorManager
   }
 }
 
-mixin NavigatorManager {
+mixin NavigatorManagerFirst {
   void navigateToWidget(BuildContext context, Widget widget) {
     Navigator.of(context).push(
       MaterialPageRoute(

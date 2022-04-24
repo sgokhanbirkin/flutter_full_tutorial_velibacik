@@ -1,7 +1,5 @@
 // ignore_for_file: unused_local_variable
 
-import 'dart:io';
-
 import 'package:equatable/equatable.dart';
 
 class UserManagment<T extends AdminUser> {
@@ -68,7 +66,7 @@ class GenericUser extends Equatable {
   final String id;
   final int money;
 
-  GenericUser(
+  const GenericUser(
     this.name,
     this.id,
     this.money,
@@ -89,5 +87,5 @@ class GenericUser extends Equatable {
 class AdminUser extends GenericUser {
   final int role;
 
-  AdminUser(String name, String id, int money, this.role) : super(name, id, money);
+  const AdminUser(String name, String id, int money, this.role) : super(name, id, money);
 }

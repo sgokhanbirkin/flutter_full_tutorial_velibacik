@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial/303/lottie_learn_view.dart';
-import 'package:tutorial/303/reqres_resource/view/reqres_provider_view.dart';
 
 import 'package:provider/provider.dart';
+import 'package:tutorial/303/mobx_image_picker/view/mobx_image_upload_view.dart';
 import 'package:tutorial/product/constant/project_items.dart';
 import 'package:tutorial/product/global/resource_context.dart';
 import 'package:tutorial/product/global/theme_notifier.dart';
+import 'package:tutorial/product/navigator/navigator_custom.dart';
+import 'package:tutorial/product/navigator/navigator_manager.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -17,7 +19,7 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -25,7 +27,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: ProjectItems.projectName,
       theme: context.watch<ThemeNotifier>().currentTheme,
-      // theme: ThemeData.dark().copyWith(
+
+      debugShowCheckedModeBanner: false,
+      //home: const LottieLearnView(),
+      //initialRoute: '/',
+      onUnknownRoute: (setting) => MaterialPageRoute(
+        builder: (context) => const LottieLearnView(),
+      ),
+      //routes: NavigatorRoute().items,
+      onGenerateRoute: onGenerateRoute,
+      navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
+      home: const MobxImageUpload(),
+    );
+  }
+}
+
+
+ // theme: ThemeData.dark().copyWith(
       //   bottomAppBarTheme: const BottomAppBarTheme(
       //     shape: CircularNotchedRectangle(),
       //   ),
@@ -83,8 +101,3 @@ class MyApp extends StatelessWidget {
       //     systemOverlayStyle: SystemUiOverlayStyle.light,
       //   ),
       // ),
-      debugShowCheckedModeBanner: false,
-      home: const LottieLearnView(),
-    );
-  }
-}

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:tutorial/product/constant/duration_items.dart';
 import 'package:tutorial/product/constant/lottie_items.dart';
 import 'package:tutorial/product/global/theme_notifier.dart';
+import 'package:tutorial/product/navigator/navigator_routes.dart';
 
 class LottieLearnView extends StatefulWidget {
   const LottieLearnView({Key? key}) : super(key: key);
@@ -20,6 +21,11 @@ class _LottieLearnViewState extends State<LottieLearnView> with TickerProviderSt
   void initState() {
     super.initState();
     controller = AnimationController(vsync: this, duration: DurationItems.durationNormal());
+  }
+
+  void navigateToHome() {
+    Future.delayed(DurationItems.durationNormal());
+    Navigator.of(context).pushReplacementNamed(NavigateRoutes.home.withParaf);
   }
 
   @override
@@ -45,19 +51,27 @@ class _LottieLearnViewState extends State<LottieLearnView> with TickerProviderSt
           ),
         ],
       ),
-      body: _loadingWidget(),
+      body: Column(
+        children: [
+          const _LoadingWidget(),
+          ElevatedButton(
+            onPressed: navigateToHome,
+            child: const Text('Navigate to Home'),
+          ),
+        ],
+      ),
     );
   }
 }
 
-class _loadingWidget extends StatelessWidget {
-  const _loadingWidget({
+class _LoadingWidget extends StatelessWidget {
+  const _LoadingWidget({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var url = 'assets/lottie/lottie_loading.json';
+    // var url = 'assets/lottie/lottie_loading.json';
     return Center(
       child: Lottie.asset(LottieItems.loading.lottiePath, repeat: false),
     );

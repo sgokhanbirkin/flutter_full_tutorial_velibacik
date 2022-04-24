@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:tutorial/202/cache/shared_preferences/shared_learn_cache.dart';
 import 'package:tutorial/303/reqres_resource/model/resource_model.dart';
 import 'package:tutorial/303/reqres_resource/service/reqres_service.dart';
