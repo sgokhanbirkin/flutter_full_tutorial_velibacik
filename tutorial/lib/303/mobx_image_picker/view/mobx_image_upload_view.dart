@@ -19,12 +19,23 @@ class _MobxImageUploadState extends State<MobxImageUpload> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            _imageUploadViewModel.saveDataToServer();
+          },
+          child: const Icon(Icons.add),
+        ),
         appBar: AppBar(
           title: Text(_data),
           actions: [
             Observer(
               builder: (_) {
                 return _imageUploadViewModel.isLoading ? const CircularProgressIndicator() : const SizedBox();
+              },
+            ),
+            Observer(
+              builder: (_) {
+                return Text(_imageUploadViewModel.downloadText);
               },
             )
           ],
@@ -66,8 +77,8 @@ class _MobxImageUploadState extends State<MobxImageUpload> {
               flex: 4,
               child: Observer(
                 builder: (contex) {
-                  return _imageUploadViewModel.file != null
-                      ? Image.file(_imageUploadViewModel.file!)
+                  return _imageUploadViewModel.imageUrl.isNotEmpty
+                      ? Image.network(_imageUploadViewModel.imageUrl)
                       : const SizedBox();
                 },
               ),
