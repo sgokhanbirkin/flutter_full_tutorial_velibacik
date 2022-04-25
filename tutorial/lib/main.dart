@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tutorial/303/lottie_learn_view.dart';
 
 import 'package:provider/provider.dart';
-import 'package:tutorial/303/mobx_image_picker/view/mobx_image_upload_view.dart';
+import 'package:tutorial/303/package/kartal/kartal_view.dart';
 import 'package:tutorial/product/constant/project_items.dart';
 import 'package:tutorial/product/global/resource_context.dart';
 import 'package:tutorial/product/global/theme_notifier.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       //routes: NavigatorRoute().items,
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const MobxImageUpload(),
+      home: const KartalView(),
     );
   }
 }

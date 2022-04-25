@@ -60,7 +60,7 @@ class _MobxImageUploadState extends State<MobxImageUpload> {
                     Expanded(
                       child: FittedBox(
                         child: IconButton(
-                          icon: Lottie.network(_lottieUrl),
+                          icon: Lottie.network(_lottieUrl, repeat: false),
                           onPressed: () async {
                             //_imageUploadManager.fetchFromLibrary();
                             _imageUploadViewModel.saveLocaleFile(await _imageUploadManager.fetchFromLibrary());

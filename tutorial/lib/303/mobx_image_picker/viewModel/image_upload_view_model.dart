@@ -21,7 +21,11 @@ abstract class _ImageUploadViewModelBase with Store {
   bool isLoading = false;
   @observable
   File? file;
-  final ImageUploadService _imageUploadService = ImageUploadService(dio: Dio(BaseOptions(baseUrl: _baseUrl)));
+  final ImageUploadService _imageUploadService = ImageUploadService(
+    dio: Dio(
+      BaseOptions(baseUrl: _baseUrl),
+    ),
+  );
 
   @action
   void changeLoading() {
@@ -32,7 +36,7 @@ abstract class _ImageUploadViewModelBase with Store {
   void uploadImageUrl(ImageUploadResponse? response) {
     if (response == null) return;
     imageUrl = _baseUrl + (response.name?.replaceFirst('/', '%2F') ?? '');
-    print('imageUrl: $imageUrl');
+    //print('imageUrl: $imageUrl');
   }
 
   void init() {}
@@ -53,7 +57,7 @@ abstract class _ImageUploadViewModelBase with Store {
         onSendProgress: (send, total) {
       updateDownloadText(send, total);
     });
-    print('Response : $response');
+    //print('Response : $response');
     uploadImageUrl(response);
   }
 }

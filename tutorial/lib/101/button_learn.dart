@@ -78,8 +78,7 @@ class ButtonLearnView extends StatelessWidget {
             ),
             onPressed: () {},
             child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 10, bottom: 10, right: 40, left: 40),
+              padding: const EdgeInsets.only(top: 10, bottom: 10, right: 40, left: 40),
               child: Text(
                 'Place Bid',
                 style: Theme.of(context).textTheme.headline4,

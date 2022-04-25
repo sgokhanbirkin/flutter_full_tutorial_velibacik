@@ -27,7 +27,7 @@ class ImageUploadService {
     // });
 
     final response = await dio.post('full%2F$name.png', data: byteArray, onSendProgress: (int sent, int total) {
-      print('$sent $total');
+      //print('$sent $total');
     });
 
     if (response.statusCode == HttpStatus.ok) {

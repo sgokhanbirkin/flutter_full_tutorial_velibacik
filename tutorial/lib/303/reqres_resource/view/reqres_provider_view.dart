@@ -43,7 +43,10 @@ class ReqresProviderViewState extends State<ReqresProviderView> with ProjectDioM
             actions: [
               IconButton(
                 onPressed: () {
-                  context.read<ReqResProvider>().saveToLocale(context.read<ResourceContext>());
+                  context.read<ReqResProvider>().saveToLocale(
+                        context.read<ResourceContext>(),
+                        context.read<ReqResProvider>().resourceItems,
+                      );
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ImageLearn202()));
                 },
                 icon: const Icon(Icons.ac_unit),
