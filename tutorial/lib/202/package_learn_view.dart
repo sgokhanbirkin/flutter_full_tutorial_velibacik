@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tutorial/202/package/launch_manager.dart';
+import 'package:tutorial/202/package/loading_bar.dart';
 
 class PackageLearnView extends StatefulWidget {
   const PackageLearnView({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _PackageLearnViewState extends State<PackageLearnView> with TickerProvider
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),
-          //const LoadingBar(),
+          const LoadingBar(),
         ],
       ),
     );

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/product/utility/image_upload.dart';
 import 'package:tutorial/product/utility/image_upload_manager.dart';
 
 class ImagePickerGenericView extends StatefulWidget {
@@ -10,7 +9,7 @@ class ImagePickerGenericView extends StatefulWidget {
 }
 
 class _ImagePickerGenericViewState extends State<ImagePickerGenericView> {
-  final _imageUploadManager = ImageUploadManager();
+  //final _imageUploadManager = ImageUploadManager();
   late final ImageUploadGenericManager _imageUploadGenericManager;
 
   @override

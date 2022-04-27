@@ -37,7 +37,22 @@ class ButtonLearnView extends StatelessWidget {
               // service istek at
               // sayfanın rengini düzenle
             },
-            child: const Icon(Icons.add),
+            shape: ShapeBorder.lerp(
+              BeveledRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              BeveledRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+              5.5,
+            ),
+            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            child: Row(
+              children: const [
+                Icon(Icons.add),
+                Text('Add'),
+              ],
+            ),
           ),
           SizedBox(
             width: 150,
@@ -62,11 +77,16 @@ class ButtonLearnView extends StatelessWidget {
             onTap: () {},
             child: const Text('Custom'),
           ),
+          OutlinedButton(
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 48.0, vertical: 12),
+                child: Text('ss'),
+              )),
           Padding(
             padding: const EdgeInsets.only(bottom: 10.0),
             child: Container(
               height: 200,
-              color: Colors.white,
             ),
           ),
           ElevatedButton(

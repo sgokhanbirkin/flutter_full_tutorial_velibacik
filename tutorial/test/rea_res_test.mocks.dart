@@ -2,7 +2,8 @@
 // in tutorial/test/rea_res_test.dart.
 // Do not manually edit this file.
 
-import 'dart:ui' as _i6;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i7;
 
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:tutorial/303/reqres_resource/model/resource_model.dart' as _i4;
@@ -10,7 +11,7 @@ import 'package:tutorial/303/reqres_resource/service/reqres_service.dart'
     as _i2;
 import 'package:tutorial/303/reqres_resource/viewModel/reqres_provider.dart'
     as _i3;
-import 'package:tutorial/product/global/resource_context.dart' as _i5;
+import 'package:tutorial/product/global/resource_context.dart' as _i6;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -22,7 +23,7 @@ import 'package:tutorial/product/global/resource_context.dart' as _i5;
 // ignore_for_file: unnecessary_parenthesis
 // ignore_for_file: camel_case_types
 
-class _FakeReqressService_0 extends _i1.Fake implements _i2.ReqressService {}
+class _FakeIReqressService_0 extends _i1.Fake implements _i2.IReqressService {}
 
 /// A class which mocks [ReqResProvider].
 ///
@@ -33,9 +34,9 @@ class MockReqResProvider extends _i1.Mock implements _i3.ReqResProvider {
   }
 
   @override
-  _i2.ReqressService get reqResService =>
+  _i2.IReqressService get reqResService =>
       (super.noSuchMethod(Invocation.getter(#reqResService),
-          returnValue: _FakeReqressService_0()) as _i2.ReqressService);
+          returnValue: _FakeIReqressService_0()) as _i2.IReqressService);
   @override
   List<_i4.Data> get resourceItems =>
       (super.noSuchMethod(Invocation.getter(#resourceItems),
@@ -57,16 +58,21 @@ class MockReqResProvider extends _i1.Mock implements _i3.ReqResProvider {
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
-  bool? saveToLocale(_i5.ResourceContext? resourceContext,
+  _i5.Future<List<_i4.Data>> fetchItems() =>
+      (super.noSuchMethod(Invocation.method(#fetchItems, []),
+              returnValue: Future<List<_i4.Data>>.value(<_i4.Data>[]))
+          as _i5.Future<List<_i4.Data>>);
+  @override
+  bool? saveToLocale(_i6.ResourceContext? resourceContext,
           List<_i4.Data>? resourceItems) =>
       (super.noSuchMethod(Invocation.method(
           #saveToLocale, [resourceContext, resourceItems])) as bool?);
   @override
-  void addListener(_i6.VoidCallback? listener) =>
+  void addListener(_i7.VoidCallback? listener) =>
       super.noSuchMethod(Invocation.method(#addListener, [listener]),
           returnValueForMissingStub: null);
   @override
-  void removeListener(_i6.VoidCallback? listener) =>
+  void removeListener(_i7.VoidCallback? listener) =>
       super.noSuchMethod(Invocation.method(#removeListener, [listener]),
           returnValueForMissingStub: null);
   @override

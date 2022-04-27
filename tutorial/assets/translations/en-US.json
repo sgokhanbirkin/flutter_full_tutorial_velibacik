@@ -1,0 +1,8 @@
+{
+    "login":{
+        "welcome":"Welcome to the login page"
+    },
+    "button": {
+        "send": "Send"
+    }
+}
