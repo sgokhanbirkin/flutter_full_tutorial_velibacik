@@ -12,9 +12,11 @@ class ProjectNetworkManager {
   Dio get service => _dio;
 
   void addBaseHeader(String token) {
-    _dio.options = _dio.options.copyWith(headers: {
-      'Authorization': token,
-    });
+    _dio.options = _dio.options.copyWith(
+      headers: {
+        'Authorization': token,
+      },
+    );
   }
 }
 

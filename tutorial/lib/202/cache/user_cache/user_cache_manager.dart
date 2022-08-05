@@ -6,7 +6,9 @@ import 'package:tutorial/202/cache/shared_preferences/user_model.dart';
 class UserCacheManager {
   final SharedManager sharedManager;
 
-  UserCacheManager({required this.sharedManager});
+  UserCacheManager({
+    required this.sharedManager,
+  });
 
   Future<void> saveItems(List<User> items) async {
     final _items = items.map((element) => jsonEncode(element)).toList();

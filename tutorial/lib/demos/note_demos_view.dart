@@ -59,8 +59,12 @@ class NodeDemosView extends StatelessWidget {
 
 // Center text widget
 class _SubtitleWidget extends StatelessWidget {
-  const _SubtitleWidget({Key? key, this.textAlign = TextAlign.center, required this.data}) : super(key: key);
-  final TextAlign? textAlign;
+  const _SubtitleWidget({
+    Key? key,
+    this.textAlign = TextAlign.center,
+    required this.data,
+  }) : super(key: key);
+  final TextAlign textAlign;
   final String data;
 
   @override

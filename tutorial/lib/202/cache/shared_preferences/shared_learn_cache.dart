@@ -120,10 +120,12 @@ class _UserListView extends StatelessWidget {
           child: ListTile(
             title: Text('${users[index].name}'),
             subtitle: Text('${users[index].description}'),
-            trailing: Text('${users[index].url}',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      decoration: TextDecoration.underline,
-                    )),
+            trailing: Text(
+              '${users[index].url}',
+              style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    decoration: TextDecoration.underline,
+                  ),
+            ),
           ),
         );
       },

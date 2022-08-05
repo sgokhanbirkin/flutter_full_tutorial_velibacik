@@ -93,10 +93,11 @@ class _SharedListCacheState extends LoadingStatefull<SharedListCache> {
                   icon: const Icon(Icons.remove_outlined),
                 ),
                 IconButton(
-                    onPressed: () async {
-                      await getShared();
-                    },
-                    icon: const Icon(Icons.download_outlined)),
+                  onPressed: () async {
+                    await getShared();
+                  },
+                  icon: const Icon(Icons.download_outlined),
+                ),
               ],
       ),
       body: Column(
@@ -131,10 +132,12 @@ class _UserListView extends StatelessWidget {
           child: ListTile(
             title: Text('${users[index].name}'),
             subtitle: Text('${users[index].description}'),
-            trailing: Text('${users[index].url}',
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                      decoration: TextDecoration.underline,
-                    )),
+            trailing: Text(
+              '${users[index].url}',
+              style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                    decoration: TextDecoration.underline,
+                  ),
+            ),
           ),
         );
       },

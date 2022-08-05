@@ -19,7 +19,10 @@ class _NavigateDetailLearnViewState extends State<NavigateDetailLearnView> {
             Navigator.of(context).pop(!widget.isOkey);
           },
           label: widget.isOkey ? const Text('Red') : const Text('Onayla'),
-          icon: Icon(Icons.check, color: widget.isOkey ? Colors.red : Colors.green),
+          icon: Icon(
+            Icons.check,
+            color: widget.isOkey ? Colors.red : Colors.green,
+          ),
         ),
       ),
     );

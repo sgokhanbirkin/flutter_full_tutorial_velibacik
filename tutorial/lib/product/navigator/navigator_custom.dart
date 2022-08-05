@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:tutorial/303/mobx_image_picker/view/mobx_image_upload_view.dart';
-import 'package:tutorial/303/navigator/navigate_home_detail_view.dart';
-import 'package:tutorial/303/navigator/navigate_home_view.dart';
-import 'package:tutorial/main.dart';
-import 'package:tutorial/product/navigator/navigator_routes.dart';
+import '../../303/mobx_image_picker/view/mobx_image_upload_view.dart';
+import '../../303/navigator/navigate_home_detail_view.dart';
+import '../../303/navigator/navigate_home_view.dart';
+import '../../main.dart';
+import 'navigator_routes.dart';
 
 mixin NavigatorCustom<T extends MyApp> on Widget {
   static const _paragfh = '/';

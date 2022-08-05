@@ -80,7 +80,6 @@ class GenericUser extends Equatable {
   String toString() => 'GenericUser{name: $name, id: $id, money: $money}';
 
   @override
-  // TODO: implement props
   List<Object?> get props => [id];
 }
 

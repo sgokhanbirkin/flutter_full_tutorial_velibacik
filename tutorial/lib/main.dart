@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:tutorial/303/lottie_learn_view.dart';
 
 import 'package:provider/provider.dart';
-import 'package:tutorial/404/compute/compute_lear.dart';
 import 'package:tutorial/product/constant/project_items.dart';
 import 'package:tutorial/product/global/theme_notifier.dart';
 import 'package:tutorial/product/init/product_init.dart';
 import 'package:tutorial/product/navigator/navigator_custom.dart';
 import 'package:tutorial/product/navigator/navigator_manager.dart';
+
+import 'NavigationTekrar/navigationTekrar.dart';
 
 Future<void> main() async {
   final _productInit = ProductInit();
@@ -47,9 +48,12 @@ class MyApp extends StatelessWidget with NavigatorCustom {
       locale: context.locale,
       onGenerateRoute: onGenerateRoute,
       navigatorKey: NavigatorManager.instance.navigatorGlobalKey,
-      home: const ComputeLearnView(),
+      home: const NavigationTekrar(),
       builder: (context, child) {
-        return MediaQuery(data: MediaQuery.of(context).copyWith(textScaleFactor: 1), child: child ?? const SizedBox());
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaleFactor: 1),
+          child: child ?? const SizedBox(),
+        );
       },
     );
   }
